@@ -7,13 +7,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { ClientNewComponent } from './client-new/client-new.component';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, '/start-angular/SB-Admin-BS4-Angular-4/master/dist/assets/i18n/', '.json');
 }
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        ClientNewComponent
     ],
     imports: [
         BrowserModule,
